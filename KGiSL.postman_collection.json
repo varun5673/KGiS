@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "ea221d01-6017-4161-b188-8da2794622d0",
+		"name": "KGiSL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19761903",
+		"_collection_link": "https://grapecityqa.postman.co/workspace/Team-Workspace~8889be86-62c2-461c-8f4b-4383dbab78a5/collection/19761903-ea221d01-6017-4161-b188-8da2794622d0?action=share&source=collection_link&creator=19761903"
+	},
+	"item": [
+		{
+			"name": "GET Countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response data test\", () => {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.pos.com.my"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.pos.com.my/"
+					}
+				],
+				"url": {
+					"raw": "https://{{baseUrl}}{{path}}/countries",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}{{path}}"
+					],
+					"path": [
+						"countries"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://www-api.pos.com.my/api/countries' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: en-US,en;q=0.9' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'origin: https://www.pos.com.my' \\\r\n  -H 'pragma: no-cache' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://www.pos.com.my/' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-site' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'"
+			},
+			"response": []
+		},
+		{
+			"name": "https://www-api.pos.com.my/api/getStateByPostcode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response data test\", () => {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.pos.com.my"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.pos.com.my/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"postCode\":\"35600\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}{{path}}/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}{{path}}"
+					],
+					"path": [
+						"getStateByPostcode"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://www-api.pos.com.my/api/getStateByPostcode' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: en-US,en;q=0.9' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'origin: https://www.pos.com.my' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://www.pos.com.my/' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-site' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' \\\r\n  --data-raw '{\"postCode\":\"35600\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "https://www-api.pos.com.my/api/price",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response data test\", () => {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.pos.com.my"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.pos.com.my/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"country\":\"Malaysia\",\"weight\":1,\"postcodeFrom\":35600,\"postcodeTo\":84000}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{baseUrl}}{{path}}/price",
+					"protocol": "https",
+					"host": [
+						"{{baseUrl}}{{path}}"
+					],
+					"path": [
+						"price"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://www-api.pos.com.my/api/price' \\\r\n  -H 'accept: application/json, text/plain, */*' \\\r\n  -H 'accept-language: en-US,en;q=0.9' \\\r\n  -H 'content-type: application/json' \\\r\n  -H 'origin: https://www.pos.com.my' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://www.pos.com.my/' \\\r\n  -H 'sec-ch-ua: \"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-site' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' \\\r\n  --data-raw '{\"country\":\"Malaysia\",\"weight\":1,\"postcodeFrom\":35600,\"postcodeTo\":84000}'"
+			},
+			"response": []
+		}
+	]
+}
